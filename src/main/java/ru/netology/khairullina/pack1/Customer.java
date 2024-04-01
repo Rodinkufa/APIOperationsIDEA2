@@ -1,6 +1,8 @@
 package ru.netology.khairullina.pack1;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable {
     private int id;
     private String name;
     private String email;
