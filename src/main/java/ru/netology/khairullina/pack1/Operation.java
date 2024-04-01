@@ -1,6 +1,6 @@
-package ru.netology.khairullina.pack2;
+package ru.netology.khairullina.pack1;
 import java.time.LocalDate;
-import java.time.LocalDate;
+
 
 public class Operation {
     private int id;
