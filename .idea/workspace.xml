@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de2cb107-f51a-4289-880a-6a9db6c10535" name="Changes" comment="123">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/OperationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Service/OperationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/CashbackOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Model/CashbackOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/ConsolePrintable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Model/IConsolePrintable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/LoanOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Model/LoanOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Model/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/OperationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Model/OperationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/pack1/OperationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Model/OperationException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +39,15 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="C:\Users\Ольга\.m2\repository" />
-        <option name="userSettingsFile" value="C:\Users\Ольга\.m2\settings.xml" />
+        <option name="localRepository" value="C:\Users\karpenko\.m2\repository" />
+        <option name="userSettingsFile" value="C:\Users\karpenko\.m2\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadAnnotationsAutomatically" value="true" />
         <option name="downloadDocsAutomatically" value="true" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -55,23 +62,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
+    "Maven.APIOperationsIDEA2 [-X].executor": "Debug",
     "Maven.APIOperationsIDEA2 [org.apache.maven.plugins:maven-install-plugin:3.1.1:help].executor": "Run",
     "Maven.APIOperationsIDEA2 [org.apache.maven.plugins:maven-install-plugin:3.1.1:install-file].executor": "Run",
     "Maven.APIOperationsIDEA2 [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor": "Run",
     "Maven.APIOperationsIDEA2 [validate].executor": "Run",
+    "Maven.APIOperationsIDEA2.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dimal/OneDrive/Документы/GitHub/APIOperationsIDEA2",
-    "onboarding.tips.debug.path": "C:/Users/Ольга/IdeaProjects/APIOperationsIDEA2/src/main/java/ru/netology/khairullina/Main.java",
-    "project.structure.last.edited": "SDKs",
+    "last_opened_file_path": "C:/Work/Java/APIOOperations/APIOperationsIDEA2/pom.xml",
+    "onboarding.tips.debug.path": "C:/Users/karpenko/IdeaProjects/APIOperationsIDEA2/src/main/java/ru/netology/khairullina/Main.java",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "MavenSettings"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [

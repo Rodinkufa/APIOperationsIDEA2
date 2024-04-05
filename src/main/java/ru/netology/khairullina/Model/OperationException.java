@@ -1,4 +1,4 @@
-package ru.netology.khairullina.pack1;
+package ru.netology.khairullina.Model;
 
 public class OperationException extends Exception {
 
@@ -18,5 +18,5 @@ public class OperationException extends Exception {
             return MESSAGE.formatted(operationId, customerId);
         }
     }
-    public class OperationRuntimeException extends RuntimeException{ }
+    public static class OperationRuntimeException extends RuntimeException{ }
 }

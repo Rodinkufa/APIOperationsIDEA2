@@ -1,8 +1,8 @@
-package ru.netology.khairullina.pack1;
+package ru.netology.khairullina.Model;
 
 import java.io.Serializable;
 
-public class Customer {
+public class Customer implements Serializable, IConsolePrintable{
     private int id;
     private String name;
     private String email;
@@ -28,9 +28,7 @@ public class Customer {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name;    }
 
     public String getEmail() {
         return email;
@@ -38,5 +36,10 @@ public class Customer {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Customer ID: " + id + ", Name ID: " + name + ", email: " + email );
     }
 }

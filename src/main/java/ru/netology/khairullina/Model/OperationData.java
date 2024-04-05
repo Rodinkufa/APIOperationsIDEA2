@@ -1,4 +1,4 @@
-package ru.netology.khairullina.pack1;
+package ru.netology.khairullina.Model;
 
 import java.io.Serializable;
 import java.time.format.DateTimeFormatter;

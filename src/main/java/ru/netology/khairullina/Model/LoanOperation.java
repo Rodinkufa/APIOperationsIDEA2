@@ -1,9 +1,9 @@
-package ru.netology.khairullina.pack1;
+package ru.netology.khairullina.Model;
 
 import java.time.LocalDate;
 
-public class LoanOperation extends Operation implements ConsolePrintable {
-    private double interestRate;
+public class LoanOperation extends Operation implements IConsolePrintable {
+    private final double interestRate;
 
     public LoanOperation(int id, String type, double amount, LocalDate date, int customerId, double interestRate) {
         super(id, type, amount, date, customerId);

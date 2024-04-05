@@ -1,8 +1,8 @@
-package ru.netology.khairullina.pack1;
+package ru.netology.khairullina.Model;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-
-public class Operation {
+public class Operation implements IConsolePrintable, Serializable {
     private int id;
     private String type;
     private double amount;
