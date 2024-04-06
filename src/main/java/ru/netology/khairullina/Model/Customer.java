@@ -1,7 +1,6 @@
 package ru.netology.khairullina.Model;
 
 import java.io.Serializable;
-
 public class Customer implements Serializable, IConsolePrintable{
     private int id;
     private String name;

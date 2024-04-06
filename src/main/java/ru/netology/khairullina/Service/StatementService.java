@@ -1,5 +1,6 @@
 package ru.netology.khairullina.Service;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import ru.netology.khairullina.Model.Operation;
 
@@ -8,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Scope("singleton")
 public class StatementService {
 
     private final Map<Integer, List<Operation>> statements  = new HashMap<>();

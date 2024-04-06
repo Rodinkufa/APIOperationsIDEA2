@@ -1,14 +1,15 @@
 package ru.netology.khairullina.Service;
 
 import jakarta.annotation.PostConstruct;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import ru.netology.khairullina.Model.Customer;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 @Service
+@Scope("singleton")
 public class CustomerService {
 
     private final StorageService<Customer> storage = new StorageService<>();
@@ -25,16 +26,16 @@ public class CustomerService {
     }
 
     // добавляем клиента по параметрам
-    public void AddCustomer(int id, String name, String email) {
+    public void addCustomer(int id, String name, String email) {
         Customer customer = new Customer();
         customer.setId(id);
         customer.setName(name);
         customer.setEmail(email);
-        AddCustomer(customer);
+        addCustomer(customer);
     }
 
     // добавляем клиента по объекту
-    public void AddCustomer(Customer customer) {
+    public void addCustomer(Customer customer) {
         storage.Add(customer);
     }
 
@@ -78,5 +79,30 @@ public class CustomerService {
         scanner.close();
 
         return new Customer(id, name, email);
+    }
+
+    public boolean updateCustomer(Customer customer) {
+
+        Customer findCustomer = getCustomer(customer.getId());
+
+        if (findCustomer == null) {
+            return false;
+        }
+
+        findCustomer.setName(customer.getName());
+        findCustomer.setEmail(customer.getEmail());
+        return true;
+    }
+
+    public boolean deleteCustomer(Integer customerId) {
+
+        Customer findCustomer = getCustomer(customerId);
+
+        if (findCustomer == null) {
+            return false;
+        }
+
+        storage.Delete(findCustomer);
+        return true;
     }
 }

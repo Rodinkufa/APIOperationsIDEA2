@@ -4,6 +4,7 @@ package ru.netology.khairullina.Service;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.netology.khairullina.Config.OperationConfig;
 import ru.netology.khairullina.Model.Operation;
 
 import java.util.LinkedList;
@@ -17,10 +18,10 @@ public class AsyncInputOperationService {
     @Autowired
     private StatementService statementService;
 
-//    @Autowired
-//    private OperationProperties operationProperties;
+    @Autowired
+    private OperationConfig operationConfig;
 
-    public boolean offerOperation(Operation operation) {
+    public boolean addOperation(Operation operation) {
         return queue.offer(operation);
     }
 
@@ -35,7 +36,7 @@ public class AsyncInputOperationService {
             if (operation == null) {
                 try {
                     System.out.println("Waiting for next operation in queue");
-                    Thread.sleep(1_000);
+                    Thread.sleep(operationConfig.getSleepmillyseconds());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
