@@ -1,5 +1,6 @@
 package ru.netology.khairullina.Service;
 
+import org.springframework.stereotype.Service;
 import ru.netology.khairullina.Model.*;
 
 import java.time.LocalDate;
@@ -8,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static ru.netology.khairullina.Main.cs;
 
+@Service
 public class OperationService {
 
     private final List<Operation> operations = new ArrayList<>();
@@ -19,8 +20,7 @@ public class OperationService {
 
     // добавляем операцию по параметрам
     public void AddOperation(int id, String type, double amount, LocalDate date, int customerId) {
-        Operation operation;
-        operation = new Operation();
+        Operation operation = new Operation();
         operation.setId(id);
         operation.setType(type);
         operation.setAmount(amount);
@@ -90,7 +90,8 @@ public class OperationService {
             // или пока не упадем с ошибкой :(((((
             System.out.print("Введите ID клиента: ");
             int customerId = Integer.parseInt(scanner.nextLine());
-            findCustomer = cs.FindCustomer(customerId);
+            CustomerService cs = new CustomerService() ;
+            findCustomer = cs.getCustomer(customerId);
             if (findCustomer == null) {
                 System.out.println("Клиент с указанным ID не найден.");
                 System.out.println("Хотите создать нового клиента или изменить выбор? ([C}оздать/[И]зменить/[О]тменить)");
