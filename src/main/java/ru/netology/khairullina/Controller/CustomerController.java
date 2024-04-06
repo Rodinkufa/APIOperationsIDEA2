@@ -38,7 +38,7 @@ public class CustomerController {
     public ResponseEntity<Void> addCustomer(@RequestParam("id")int id,
                                             @RequestParam("name") String name,
                                             @RequestParam("email") String email) {
-        customerService.addCustomer((id), name, email);
+        customerService.addCustomer(id, name, email);
 
         return new ResponseEntity<Void>(HttpStatus.OK);
     }

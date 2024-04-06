@@ -99,8 +99,6 @@ public class OperationService {
         // объявляем переменную для подбора клиента
         Customer findCustomer = null;
         do {
-            // бегаем по кругу пока не найдем или не создадим клиента
-            // или пока не упадем с ошибкой :(((((
             System.out.print("Введите ID клиента: ");
             int customerId = Integer.parseInt(scanner.nextLine());
             findCustomer = cs.getCustomer(customerId);
