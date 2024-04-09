@@ -35,7 +35,7 @@ public class CustomerController {
     }
 
     @PostMapping(path = "add", params={"id", "name", "email"})
-    public ResponseEntity<Void> addCustomer(@RequestParam("id")int id,
+    public ResponseEntity<?> addCustomer(@RequestParam("id")int id,
                                             @RequestParam("name") String name,
                                             @RequestParam("email") String email) {
         customerService.addCustomer(id, name, email);
@@ -45,17 +45,17 @@ public class CustomerController {
 
     // обновление
     @PutMapping
-    public ResponseEntity<Void> updateArticle(@RequestBody Customer customer) {
+    public ResponseEntity<?> updateArticle(@RequestBody Customer customer) {
         boolean res = customerService.updateCustomer( customer);
         if (res)
-            return new ResponseEntity<Void>(HttpStatus.OK);
+            return new ResponseEntity<>(customer, HttpStatus.OK);
         else
-            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     // удалить по ИД
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteArticle(@PathVariable("id") Integer customerId) {
+    public ResponseEntity<?> deleteArticle(@PathVariable("id") Integer customerId) {
         boolean res = customerService.deleteCustomer(customerId);
         if (res)
             return new ResponseEntity<Void>(HttpStatus.OK);

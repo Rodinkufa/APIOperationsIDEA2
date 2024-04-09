@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de2cb107-f51a-4289-880a-6a9db6c10535" name="Changes" comment="123">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Config/OperationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Config/OperationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Service/AsyncInputOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Service/AsyncInputOperationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Controller/OperationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Controller/OperationsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Service/OperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Service/OperationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Service/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/khairullina/Service/StorageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "Application.OperationHistoryApiApplication.executor": "Debug",
+    "Application.OperationHistoryApiApplication.executor": "Run",
     "Maven.APIOperationsIDEA2 [-X].executor": "Debug",
     "Maven.APIOperationsIDEA2 [org.apache.maven.plugins:maven-install-plugin:3.1.1:help].executor": "Run",
     "Maven.APIOperationsIDEA2 [org.apache.maven.plugins:maven-install-plugin:3.1.1:install-file].executor": "Run",
@@ -71,7 +68,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Work/Java/APIOOperations/APIOperationsIDEA2/APIOperationsIDEA2",
+    "last_opened_file_path": "C:/Work/Java/APIOperationsIDEA2",
     "onboarding.tips.debug.path": "C:/Users/karpenko/IdeaProjects/APIOperationsIDEA2/src/main/java/ru/netology/khairullina/Main.java",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",

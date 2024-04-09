@@ -45,6 +45,12 @@ public class OperationService {
         storage.Add(operation);
     }
 
+    // возврат всех операций
+    public  ArrayList<Operation> getOperations() {
+
+        return (ArrayList<Operation>) storage.GetList();
+    }
+
     // возврат операций по клиенту
     public  ArrayList<Operation> getOperations(int customerId) {
 
@@ -57,6 +63,23 @@ public class OperationService {
         }
 
         return customerOperations;
+    }
+
+    // поиск операции по ид
+    public Operation getOperation(int id) {
+
+        List<Operation> operations = storage.GetList();
+
+        if (operations.isEmpty()) {
+            return null;
+        }
+
+        for(Operation operation : operations) {
+            if(operation.getId() == id) {
+                return operation;
+            }
+        }
+        return null;
     }
 
     // печать списка операций по клиенту
@@ -129,5 +152,32 @@ public class OperationService {
         } else {
             return new Operation(id, type, amount, date, findCustomer.getId());
         }
+    }
+
+    public boolean updateOperation(Operation operation) {
+
+        Operation findOperation = getOperation(operation.getId());
+
+        if (findOperation == null) {
+            return false;
+        }
+
+        findOperation.setType(operation.getType());
+        findOperation.setDate(operation.getDate());
+        findOperation.setAmount(operation.getAmount());
+        findOperation.setCustomerId(operation.getCustomerId());
+        return true;
+    }
+
+    public boolean deleteOperation(Integer customerId) {
+
+        Operation findOperation = getOperation(customerId);
+
+        if (findOperation == null) {
+            return false;
+        }
+
+        storage.Delete(findOperation);
+        return true;
     }
 }

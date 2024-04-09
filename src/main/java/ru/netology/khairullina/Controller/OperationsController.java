@@ -22,18 +22,43 @@ public class OperationsController {
         this.os = os;
     }
 
+    @GetMapping
+    public List<Operation> getOperations() {
+        return os.getOperations();
+    }
+
     @GetMapping("{id}")
     public List<Operation> getOperations(@PathVariable("id")int customerId) {
         return os.getOperations(customerId);
     }
 
     @PostMapping
-    public ResponseEntity<Void> addOperation(@RequestBody Operation operation){
+    public ResponseEntity<?> addOperation(@RequestBody Operation operation){
         Customer findCustomer = cs.getCustomer(operation.getCustomerId());
         if (findCustomer == null)
-            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
         os.AddOperation(operation);
-        return new ResponseEntity<Void>(HttpStatus.OK);
+        return new ResponseEntity<>(operation, HttpStatus.OK);
+    }
+
+    // обновление
+    @PutMapping
+    public ResponseEntity<?> updateArticle(@RequestBody Operation operation) {
+        boolean res = os.updateOperation(operation);
+        if (res)
+            return new ResponseEntity<>(HttpStatus.OK);
+        else
+            return new ResponseEntity<>(operation, HttpStatus.NOT_FOUND);
+    }
+
+    // удалить по ИД
+    @DeleteMapping("{id}")
+    public ResponseEntity<?> deleteArticle(@PathVariable("id") Integer operationId) {
+        boolean res = os.deleteOperation(operationId);
+        if (res)
+            return new ResponseEntity<>(HttpStatus.OK);
+        else
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
